@@ -1,3 +1,9 @@
+# 本repo的目的
+解决获取不到服务器IP的问题
+
+<details>
+    <summary>原项目readme (点击展开)</summary>
+   
 # 介绍
 
 最好用的 sing-box 一键安装脚本 & 管理脚本
@@ -112,3 +118,4 @@ Usage: sing-box [options]... [args]...
 反馈问题) https://github.com/233boy/sing-box/issues
 文档(doc) https://233boy.com/sing-box/sing-box-script/
 ```
+<、details>
