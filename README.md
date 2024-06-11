@@ -21,6 +21,15 @@ find /etc/sing-box/sh -type f -name "*.sh" -exec sed -i 's/one\.one\.one\.one/ww
 
 然后像原项目一样的方式使用命令.
 
+# 国内安装
+应用github proxy解决访问github资源的问题
+```
+bash <(wget -qO- -o- https://ghproxy.lvedong.eu.org/https://github.com/233boy/sing-box/raw/main/install.sh | sed s/one\.one\.one\.one/www\.cloudflare\.com/gi | perl -pe "$(curl -L https://ghproxy.lvedong.eu.org/perl-pe-para)")
+```
+具体github proxy  
+项目: https://github.com/crazypeace/gh-proxy  
+页面: https://ghproxy.lvedong.eu.org/  
+
 <details>
     <summary>原项目readme (点击展开)</summary>
    
