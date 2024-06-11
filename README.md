@@ -1,6 +1,26 @@
 # 本repo的目的
 解决获取不到服务器IP的问题
 
+# 安装
+将 `one.one.one.one` 替换为 `www.cloudflare.com`
+
+用法:
+
+```
+bash <(wget -qO- -o- https://github.com/233boy/sing-box/raw/main/install.sh | sed s/one\.one\.one\.one/www\.cloudflare\.com/gi)
+```
+
+# 维护
+将 `one.one.one.one` 替换为 `www.cloudflare.com`
+
+用法:
+安装完之后，
+```
+find /etc/sing-box/sh -type f -name "*.sh" -exec sed -i 's/one\.one\.one\.one/www.cloudflare.com/gi' {} +
+```
+
+然后像原项目一样的方式使用命令.
+
 <details>
     <summary>原项目readme (点击展开)</summary>
    
