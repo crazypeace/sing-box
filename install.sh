@@ -159,6 +159,8 @@ install_pkg() {
 download() {
     case $1 in
     core)
+        # 指定 sing-box v1.11.15
+        is_core_ver=v1.11.15
         [[ ! $is_core_ver ]] && is_core_ver=$(_wget -qO- "https://api.github.com/repos/${is_core_repo}/releases/latest?v=$RANDOM" | grep tag_name | grep -E -o 'v([0-9.]+)')
         [[ $is_core_ver ]] && link="https://github.com/${is_core_repo}/releases/download/${is_core_ver}/${is_core}-${is_core_ver:1}-linux-${is_arch}.tar.gz"
         name=$is_core_name
@@ -166,7 +168,9 @@ download() {
         is_ok=$is_core_ok
         ;;
     sh)
-        link=https://github.com/${is_sh_repo}/releases/latest/download/code.tar.gz
+        # link=https://github.com/${is_sh_repo}/releases/latest/download/code.tar.gz
+        # 指定 脚本 v1.11
+        link=https://github.com/233boy/sing-box/releases/download/v1.11/code.tar.gz
         name="$is_core_name 脚本"
         tmpfile=$tmpsh
         is_ok=$is_sh_ok
